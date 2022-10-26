@@ -8,6 +8,12 @@ The purpose of this repository is to demonstrate how to build a simple web appli
 
 Go to https://start.spring.io/ and pick the following.
 
+| Left |  Center  | Right |
+|:-----|:--------:|------:|
+| L0   | **bold** | $1600 |
+| L1   |  `code`  |   $12 |
+| L2   | _italic_ |    $1 |
+
 Project = Maven (this can be done with Gradle as well)
 Language = Java
 Packaging = Jar
