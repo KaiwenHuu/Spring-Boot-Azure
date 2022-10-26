@@ -8,26 +8,40 @@ The purpose of this repository is to demonstrate how to build a simple web appli
 
 Go to https://start.spring.io/ and pick the following.
 
-| Left |  Center  | Right |
-|:-----|:--------:|------:|
-| L0   | **bold** | $1600 |
-| L1   |  `code`  |   $12 |
-| L2   | _italic_ |    $1 |
+| Element      |   Value  |
+|:------------:|:--------:|
+| Project      |   Maven  |
+| Language     |    Java  |
+| Spring Boot  |    2.7.x |
+| Packaging    |    Jar   |
+| Java         |    17    |
 
-Project = Maven (this can be done with Gradle as well)
-Language = Java
-Packaging = Jar
-Java = 17 (this can be older versions as well)
+#### Note
 
-Add the following depdencies: Spring Web, Thymeleaf, Spring Data JDBC, Spring Data JPA, H2 Database, Spring Boot DevTools, Azure Support, Azure Active Directory, Azure Cosmos DB, Azure Key Vault, Azure Storage, MS SQL Server Driver.
+We can achieve the same goal using Gradle and War packaging. Also, any Spring Boot version below 2.7.x and Java runtime below 17 would work as well.
+
+Add the following depdencies: 
+
+- Spring Web
+- Thymeleaf
+- Spring Data JDBC
+- Spring Data JPA
+- H2 Database
+- Spring Boot DevTools
+- Azure Support
+- Azure Active Directory
+- Azure Cosmos DB
+- Azure Key Vault
+- Azure Storage
+- MS SQL Server Driver.
 
 Finally, click Generate.
 
 ### 2 Some Coding
 
-Open the Spring Boot Project you just generated in any IDE.
+Extract the zip file that contains the Spring Boot Project, and open it in any IDE.
 
-Under the same directory where Application.java is located, create a new directory named "controller". Under the new controller directory, create a new Controller.java file.
+Under the same directory where Application.java is located, create a new directory named "controller". Under the new controller directory, create a new Controller.java file. Now, add the following lines of code.
 
 ```java
 @RestController
@@ -56,14 +70,17 @@ Browse http://127.0.0.1:8080 to check if the application compiles.
 
 Go to your Azure Portal and create an App Service with the following configuration
 
-Resoruce Group = Any resource group
-Name = Any name
-Publish = Code (default value)
-Runtime stack = Java 17
-Java web server stack = Java SE (Embedded Web Server)
-Operating System = Linux or Windows
-Region = Any region
-App Service Plan = P1v2 (any plan would do)
+| Element      |   Value  |
+|:------------:|:--------:|
+| Resoruce Group|   Any Resource Group  |
+| Name     |    A name for your application  |
+| Publish  |    Code (default value) |
+| Runtime stack    |    Java 17 (this should be the same as the Java version you selected when intializing your Spring Boot project)   |
+| App Service Plan       |     P1v2 (default value)    |
+
+#### Note
+
+For the App Service Plan, pick the plan that best suits your need.
 
 Then, create the resource.
 
@@ -71,4 +88,4 @@ Once the resource is created, you should be able to browse <name>.azurewebsites.
 
 To deploy your code on Azure Web Apps, first make sure that your code is pushed on a Github repository.
 
-Now go to the web app in the Azure Portal, and on the left plane select Deployment Center. In Settings, select Github as your source. If this is your first time using Github in your Azure portal, follow the instructions and sign into your Github account for authorization. Select the organization (your github user id), repository that you want to deploy, and the branch that you want to deploy (usually main). Make sure that the Build configuration is correct. By selecting Save, you will create a workflow yml file. This yml file enables you to deploy the code everytime there is a new code change pushed into the main branch.
+Now go to the web app resource we created in the Azure Portal, and on the left plane select Deployment Center. In Settings, select Github as your source. If this is your first time using Github in your Azure portal, follow the instructions and sign into your Github account for authorization. Select the organization (your github user id), repository that you want to deploy, and the branch that you want to deploy (usually main). Make sure that the Build configuration is correct. By selecting Save, you will create a workflow yml file. This yml file enables you to deploy the code to App Service everytime there is a new code change pushed into the main branch.
