@@ -37,7 +37,7 @@ Finally, click Generate. This will download a zip file that contains the Spring 
 
 ### 2 Some Coding
 
-Extract the zip file that contains the Spring Boot Project, and open it in any IDE.
+Extract the zip file that and open it in any IDE of preference. Recommended IDE for Java would be IntelliJ IDEA, Eclipse or Visual Studio Code.
 
 Under the same directory where Application.java is, create a new directory named "controller". Under the newly created controller directory, create a Controller.java file. Now, add the following lines of code.
 
