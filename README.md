@@ -2,6 +2,14 @@
 
 The purpose of this repository is to demonstrate how to build a simple web application with Spring Boot application using Azure App Service that runs on Java 17. We will also connect to other resources like Azure SQL databases, Storage Accounts, Key Vaults, etc.
 
+### Prerequisites
+
+Make sure you have the following
+
+- Java 17
+- Maven
+- A valid Azure Subscription
+
 ## Initialize Spring Boot Application
 
 ### 1 Generate Spring Boot Project
