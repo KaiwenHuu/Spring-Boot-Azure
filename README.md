@@ -6,8 +6,8 @@ The purpose of this repository is to demonstrate how to build a simple web appli
 
 Make sure you have the following
 
-- Java 17
-- Maven
+- <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank">Java 17</a>
+- <a href="https://maven.apache.org/install.html" target="_blank">Maven</a>
 - A valid Azure Subscription
 
 ## Initialize Spring Boot Application
