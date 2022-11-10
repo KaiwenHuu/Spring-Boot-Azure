@@ -85,6 +85,7 @@ Go to your Azure Portal and create an App Service with the following configurati
 | Region   | Any region |
 | Publish  |    Code (default value) |
 | Runtime stack    |    Java 17 (this should be the same as the Java version you selected when intializing your Spring Boot project)   |
+| Java web server stack | Java SE (Embedded Web Server) |
 | App Service Plan       |     P1v2 (default value)    |
 
 _For the App Service Plan, pick the plan that best suits your need._
